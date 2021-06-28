@@ -1,6 +1,7 @@
 export default {
     products:[
     {
+        id:'1',
         name: 'Cake',
         image: '/images/kinder.jpg',
         category: 'Cakes',
@@ -10,6 +11,7 @@ export default {
         numReviews: 10
     },
     {
+        id:'2',
         name: 'Book mark',
         image: '/images/kinder.jpg',
         category: 'Marks',
@@ -19,6 +21,7 @@ export default {
         numReviews: 10
     },
     {
+        id:'3',
         name: 'Cup',
         image: '/images/kinder.jpg',
         category: 'Polymer clay',
@@ -28,6 +31,7 @@ export default {
         numReviews: 10
     },
     {
+        id:'4',
         name: 'Knitted bunny',
         image: '/images/kinder.jpg',
         category: 'Knitted',
