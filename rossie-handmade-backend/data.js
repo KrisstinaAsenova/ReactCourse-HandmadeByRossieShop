@@ -8,7 +8,8 @@ export default {
         price:60,
         brand: 'Rossie',
         rating: 4.5,
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 0
     },
     {
         id:'2',
@@ -18,7 +19,8 @@ export default {
         price:10,
         brand: 'Rossie',
         rating: 4.5,
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 10
     },
     {
         id:'3',
@@ -28,7 +30,8 @@ export default {
         price:30,
         brand: 'Rossie',
         rating: 4.5,
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 2
     },
     {
         id:'4',
@@ -38,7 +41,8 @@ export default {
         price:25,
         brand: 'Rossie',
         rating: 4.5,
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 3
     },
 ]
 }
