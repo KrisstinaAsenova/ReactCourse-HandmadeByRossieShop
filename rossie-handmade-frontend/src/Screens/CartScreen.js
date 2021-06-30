@@ -32,12 +32,12 @@ function CartScreen(props){
         <div className="cart-list">
             <ul className="cart-list-container">
                 <li>
-                    <h3>
+                    <h1>
                         Shopping cart
-                    </h3>
-                    <div>
+                    </h1>
+                    <h1>
                         Price
-                    </div>
+                    </h1>
                 </li>
                 {
                     cartItems.length === 0 ?
@@ -62,27 +62,27 @@ function CartScreen(props){
                                      <option key={x + 1} value={x + 1}>{x + 1}</option>
                                      )}
                                     </select>
-                                    <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)}>
+                                    <button type="button" className="delete-button" onClick={() => removeFromCartHandler(item.product)}>
                                         Delete
                                     </button>
                             </div>
                             <div className="cart-price">
-                                Price: ${item.price}
+                                ${item.price * item.qty}
                             </div>
                         </div>
-                        </li>                    )
+                        </li>                 
+                    )
+                   
                 }
             </ul>
-        </div>
-        <div className="cart-action">
-            <h3>
-                Subtotal ( {cartItems.reduce((a,c) => a + c.qty, 0)} items)
-                : $ {cartItems.reduce((a,c) => a + c.price * c.qty, 0)}
-            </h3>
+            <div className="total-price">
+                 Total: $ {cartItems.reduce((a,c) => a + c.price * c.qty, 0)}
+            </div>
             <button onClick={checkoutHandler} className="button full-width" disabled={cartItems.length===0}>
                 Proceed to Checkout
             </button>
         </div>
+        
     </div>
 }
 
