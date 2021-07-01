@@ -6,28 +6,24 @@ import { Link } from 'react-router-dom';
 function CartScreen(props){
 
     const cart = useSelector(state => state.cart);
-    const {cartItems} = cart;
+
+    const { cartItems } = cart;
+  
     const productId = props.match.params.id;
-    const qty =  props.location.search ? Number(props.location.search.split("=")[1]) : 1;
+    const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
     const dispatch = useDispatch();
-
     const removeFromCartHandler = (productId) => {
-        dispatch(removeFromCart(productId));
+      dispatch(removeFromCart(productId));
     }
-
-    const checkoutHandler = () => {
-        props.history.push("/signin?redirect=shipping");
-      }
-
-      
     useEffect(() => {
-        if(productId){
-            dispatch(addToCart(productId, qty));
-        }
-        return () => {
-            
-        };
+      if (productId) {
+        dispatch(addToCart(productId, qty));
+      }
     }, []);
+  
+    const checkoutHandler = () => {
+      props.history.push("/signin?redirect=shipping");
+    }
 
     return <div className="cart"> 
         <div className="cart-list">
@@ -49,7 +45,7 @@ function CartScreen(props){
                         Cart is empty
                     </div> :
                     cartItems.map( item =>
-                        <li>
+                        <li key={item.id}>
                         <div className="cart-image">
                             <img src={item.image} alt="product" />
                         </div>

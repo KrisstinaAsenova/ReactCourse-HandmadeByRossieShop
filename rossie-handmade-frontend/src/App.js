@@ -32,9 +32,12 @@ function App() {
             <Link to="/">Rossie</Link>
         </div>
         <div className="header-links">
-            <a href="cart.html">
+          
+           <Link to="/products">Products</Link> 
+          
+            <Link to="/cart">
                 Cart
-            </a>
+            </Link>
             {userInfo ? <Link to="/profile">{userInfo.name}</Link>
             : <Link to="/signin">
             Sign In
