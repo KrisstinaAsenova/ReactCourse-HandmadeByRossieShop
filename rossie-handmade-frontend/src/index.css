@@ -330,14 +330,14 @@ a > .rating > span:last-child {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 10rem;
+  padding: 1rem;
   font-size: 2rem;
 }
 .form-container {
   display: flex;
   flex-direction: column;
-  width: 32rem;
-  padding: 2rem;
+  width: 60rem;
+  padding: 1.7rem;
   border: 0.1rem plum solid;
   border-radius: 0.5rem;
   list-style-type: none;
@@ -352,4 +352,31 @@ input {
   padding: 1rem;
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
+}
+
+/* Products */
+
+.product-header {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem;
+}
+
+.product-list {
+  font-size: 2rem;
+}
+
+.content-margined {
+  margin: 1rem;
+}
+
+.table {
+  width: 100%;
+}
+th {
+  text-align: left;
+}
+tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0;
 }
