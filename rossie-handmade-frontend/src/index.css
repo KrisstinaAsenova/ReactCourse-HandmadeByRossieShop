@@ -53,6 +53,7 @@ button {
 }
 .main {
   grid-area: main;
+  padding-top: 8rem;
 }
 .footer {
   grid-area: footer;
@@ -141,7 +142,7 @@ a > .rating > span:last-child {
 /* Sidebar */
 
 .brand button {
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 0.5rem;
   background: none;
   border: none;
@@ -155,6 +156,7 @@ a > .rating > span:last-child {
   width: 30rem;
   background-color: #f0f0f0;
   height: 100%;
+  font-size: 3rem;
 }
 .sidebar.open {
   transform: translateX(0);
@@ -247,7 +249,7 @@ a > .rating > span:last-child {
   flex-wrap: wrap;
   margin: 1rem;
   align-items: flex-start;
-  padding: 6rem;
+  padding: 2rem;
 }
 .cart-list {
   flex: 3 1 60rem;
@@ -330,7 +332,6 @@ a > .rating > span:last-child {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 6rem;
   font-size: 2rem;
 }
 .form-container {
@@ -360,7 +361,7 @@ input {
   font-size: 1.8rem;
   display: flex;
   justify-content: space-between;
-  padding: 6rem;
+  padding: 2rem;
 }
 
 .product-list {
@@ -411,4 +412,24 @@ tbody > tr:nth-child(odd) {
 
 .categories a:hover {
   background-color: #c0c0c0;
+}
+
+/* Checkout Steps */
+
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  margin: 1rem auto;
+}
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1 1;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+.checkout-steps > div.active {
+  border-top: 0.3rem plum solid;
+  color: plum;
 }

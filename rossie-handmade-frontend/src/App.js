@@ -7,6 +7,9 @@ import SigninScreen from './screens/SigninScreen';
 import { useDispatch, useSelector } from 'react-redux';
 import RegisterScreen from './screens/RegisterScreen';
 import ProductsScreen from './screens/ProductsScreen';
+import ShippingScreen from './screens/ShippingScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
 
@@ -32,12 +35,14 @@ function App() {
             <Link to="/">Rossie</Link>
         </div>
         <div className="header-links">
-          
-           <Link to="/products">Products</Link> 
-          
-            <Link to="/cart">
-                Cart
-            </Link>
+          {userInfo && userInfo.isAdmin && (
+                 <Link to="/products">Products</Link> 
+            )}
+           
+           {userInfo && userInfo.isAdmin===false && (
+             <Link to="/cart">Cart</Link>
+            )}
+                   
             {userInfo ? <Link to="/profile">{userInfo.name}</Link>
             : <Link to="/signin">
             Sign In
@@ -71,7 +76,9 @@ function App() {
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} /> 
             <Route path="/" exact={true} component={HomeScreen} />
-
+            <Route path="/shipping" component={ShippingScreen} />
+            <Route path="/payment" component={PaymentScreen} />
+            <Route path="/profile" component={ProfileScreen} />
           </div>
         </main>
       <footer className="footer">

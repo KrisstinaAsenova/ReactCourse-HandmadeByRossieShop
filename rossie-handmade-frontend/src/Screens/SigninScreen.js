@@ -41,12 +41,12 @@ function SigninScreen(props) {
           <label htmlFor="email">
             Email
           </label>
-          <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
+          <input type="email" name="email" id="email" required onChange={(e) => setEmail(e.target.value)}>
           </input>
         </li>
         <li>
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
+          <input type="password" id="password" name="password" required onChange={(e) => setPassword(e.target.value)}>
           </input>
         </li>
         <li>
@@ -56,7 +56,7 @@ function SigninScreen(props) {
           New to site?
         </li>
         <li>
-            <Link to="/register" className="button text-center">Create your account</Link>
+            <Link to={redirect === "/" ? "register" : "/register?redirect=" + redirect} className="button text-center">Create your account</Link>
         </li>
       </ul>
     </form>

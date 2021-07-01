@@ -43,32 +43,32 @@ function RegisterScreen(props) {
           <label htmlFor="name">
             Name
           </label>
-          <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)}>
+          <input type="text" name="name" id="name" required onChange={(e) => setName(e.target.value)}>
           </input>
         </li>
         <li>
           <label htmlFor="email">
             Email
           </label>
-          <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
+          <input type="email" name="email" id="email" required onChange={(e) => setEmail(e.target.value)}>
           </input>
         </li>
         <li>
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
+          <input type="password" id="password" name="password" required onChange={(e) => setPassword(e.target.value)}>
           </input>
         </li>
         <li>
           <label htmlFor="rePassword">Re-enter Password</label>
-          <input type="password" id="rePassword" name="rePassword" onChange={(e) => setRePassword(e.target.value)}>
+          <input type="password" id="rePassword" name="rePassword" required onChange={(e) => setRePassword(e.target.value)}>
           </input>
         </li>
         <li>
-          <button type="submit" className="button primary">Register</button>
+          <button type="submit" className="button">Register</button>
         </li>
         <li>
-          Already have an account? <Link to="/signin">Sign In</Link>
-        </li>
+          Already have an account?   <Link to={redirect === "/" ? "signin" : "/signin?redirect=" + redirect} className="button text-center">Create your account</Link>
+     </li>
       </ul>
     </form>
     </div>
